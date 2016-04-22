@@ -159,7 +159,7 @@ Transform:
   m_LocalScale: {x: 0.33, y: 5, z: 36}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &427236960
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ Transform:
   m_LocalScale: {x: 0.33, y: 5, z: 36}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &940604823
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +308,7 @@ GameObject:
   - 92: {fileID: 1061689528}
   - 124: {fileID: 1061689527}
   - 81: {fileID: 1061689526}
+  - 114: {fileID: 1061689531}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -377,11 +378,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1061689525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.01, z: -3.1}
+  m_LocalPosition: {x: -0.53, y: 1.0100001, z: -2.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1610839161}
   m_RootOrder: 0
+--- !u!114 &1061689531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061689525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f37e452dbb7d114993510ae2895206d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 2
+  sensitivityX: 15
+  sensitivityY: 15
+  minX: -360
+  maxX: 360
+  minY: -60
+  maxY: 60
 --- !u!1 &1541069004
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +475,7 @@ Transform:
   m_LocalScale: {x: 0.33, y: 5, z: 35}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1610839156
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,12 +564,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1610839156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3214733, y: 1.62, z: -6.5827866}
+  m_LocalPosition: {x: -0.3214733, y: 1.62, z: -7.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1061689530}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!143 &1610839162
 CharacterController:
   m_ObjectHideFlags: 0
@@ -579,8 +598,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f37e452dbb7d114993510ae2895206d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 300
-  clampAngle: 80
+  axes: 1
+  sensitivityX: 15
+  sensitivityY: 15
+  minX: -360
+  maxX: 360
+  minY: -60
+  maxY: 60
 --- !u!1 &1836760406
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +679,7 @@ Transform:
   m_LocalScale: {x: 0.33, y: 5, z: 35}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &2022809124
 GameObject:
   m_ObjectHideFlags: 0
