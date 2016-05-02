@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 226863777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rifle_Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 417124595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rilfe_MasterBone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - 4: {fileID: 474542414}
   - 95: {fileID: 474542415}
   - 114: {fileID: 474542416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScifiRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474542413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46, y: -0.31000006, z: 0.58}
+  m_LocalPosition: {x: 0.4599999, y: -0.31000006, z: 0.5800003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 908026925}
@@ -290,6 +290,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4118832b8be77ce4392c358134f41c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &679733323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 173878, guid: 5fd69d63da0af974b95d61443d6cbb2d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 679733324}
+  - 20: {fileID: 679733329}
+  - 114: {fileID: 679733325}
+  m_Layer: 0
+  m_Name: Gun Camera
+  m_TagString: Gun Camera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &679733324
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 421822, guid: 5fd69d63da0af974b95d61443d6cbb2d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679733323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05399991, y: 0.6200001, z: -0.104999706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1524944627}
+  m_RootOrder: 1
+--- !u!114 &679733325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11467772, guid: 5fd69d63da0af974b95d61443d6cbb2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679733323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f37e452dbb7d114993510ae2895206d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 2
+  sensitivityX: 15
+  sensitivityY: 15
+  minX: -360
+  maxX: 360
+  minY: -90
+  maxY: 90
+--- !u!20 &679733329
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2023606, guid: 5fd69d63da0af974b95d61443d6cbb2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679733323}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 75
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 12
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!1 &829885748
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +452,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 908026925}
   - 137: {fileID: 908026926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +581,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1220179594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rifle_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +669,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1385111133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rifle_Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,6 +691,10 @@ Transform:
 --- !u!1 &1524944620 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 196152, guid: 5fd69d63da0af974b95d61443d6cbb2d, type: 2}
+  m_PrefabInternal: {fileID: 2049953048}
+--- !u!4 &1524944627 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 406774, guid: 5fd69d63da0af974b95d61443d6cbb2d, type: 2}
   m_PrefabInternal: {fileID: 2049953048}
 --- !u!82 &1524944628
 AudioSource:
