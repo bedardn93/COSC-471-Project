@@ -35,7 +35,7 @@ GameObject:
   - 143: {fileID: 14336146}
   - 114: {fileID: 11422024}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8701ddc5527bc47811918d53ac0636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  walkSpeed: 5
+  runSpeed: 10
+  sprintSpeed: 16
   jumpSpeed: 8
   gravity: 20
 --- !u!124 &12425844
