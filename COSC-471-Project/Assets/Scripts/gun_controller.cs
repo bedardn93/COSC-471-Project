@@ -27,30 +27,43 @@ public class gun_controller : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if (Input.GetKey (KeyCode.Mouse0) && Time.fixedTime >= nextShot && bullets > 0 && Time.fixedTime >= nextReload) {
-			//Create bullet game object
-			GameObject obj = Instantiate(projectile.gameObject, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
-			//Get rigidbody from bullet so we can apply force/move it around realistically
-			Rigidbody clone = obj.GetComponent<Rigidbody> ();
-			audio.Play ();
-			//Apply force up y-axis (green axis)
-			clone.AddForce (clone.transform.up * bulletSpeed);
-			bullets--;
-			nextShot = Time.fixedTime + nextShotTime;
+			shoot ();
 		}
 		//If clip has less than maxBullets then reload
 		if (Input.GetKey (KeyCode.R) && bullets < maxBullets && ammo > 0 && Time.fixedTime >= nextReload) {
-			//Delay nextReload so player can't continue firing or initiate another reload
-			nextReload = Time.fixedTime + reloadTime;
-			anim.SetBool (reloadHash, true);
-			if (ammo + bullets < maxBullets) {
-				bullets += ammo;
-				ammo = 0;
-			} else{
-				ammo -= maxBullets - bullets;
-				bullets = maxBullets;
-			}
+			reload ();
 		}
+	}
+
+	void reload(){
+		//Delay nextReload so player can't continue firing or initiate another reload
+		nextReload = Time.fixedTime + reloadTime;
+		anim.SetBool (reloadHash, true);
+		if (ammo + bullets < maxBullets) {
+			bullets += ammo;
+			ammo = 0;
+		} else{
+			ammo -= maxBullets - bullets;
+			bullets = maxBullets;
+		}
+	}
+
+	void shoot(){
+		//Create bullet game object
+		GameObject obj = Instantiate (projectile.gameObject, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
+		//Get rigidbody from bullet so we can apply force/move it around realistically
+		Rigidbody clone = obj.GetComponent<Rigidbody> ();
+		//Play shooting sound
+		audio.Play ();
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit, 1000.0f))
+			Debug.DrawLine (ray.origin, hit.point);
+		//Apply force up y-axis (green axis)
+		clone.AddForce (clone.transform.up * bulletSpeed);
+		bullets--;
+		nextShot = Time.fixedTime + nextShotTime;
 	}
 }
