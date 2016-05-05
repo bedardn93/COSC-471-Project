@@ -341,8 +341,9 @@ MonoBehaviour:
   maxBullets: 30
   bullets: 30
   bulletSpawn: {fileID: 427502}
-  projectile: {fileID: 445666, guid: 7f43e9145b6ca6a45954077a9f408a46, type: 2}
-  bulletSpeed: 2000
+  projectile: {fileID: 484456, guid: 7f43e9145b6ca6a45954077a9f408a46, type: 2}
+  bulletHole: {fileID: 487438, guid: 7eb5922fb75f2ca45abf1270d84c90a1, type: 2}
+  bulletSpeed: 5000
   nextShotTime: 0.15
 --- !u!136 &13698368
 CapsuleCollider:
