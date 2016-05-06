@@ -41,7 +41,7 @@ public class gun_controller : MonoBehaviour {
 		}
 	}
 
-	void reload(){
+	public void reload(){
 		//Delay nextReload so player can't continue firing or initiate another reload
 		nextReload = Time.fixedTime + reloadTime;
 		//If statement for handling ammo (pooled bullets) 
@@ -55,7 +55,7 @@ public class gun_controller : MonoBehaviour {
 		}
 	}
 
-	void shoot(){
+	public void shoot(){
 		//Create bullet game object
 		GameObject obj = Instantiate (projectile.gameObject, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
 		//Get rigidbody from bullet so we can apply force/move it around realistically
@@ -92,4 +92,11 @@ public class gun_controller : MonoBehaviour {
 			return true;
 		return false;
 	}
+
+    public bool outOfBullets()
+    {
+        if (bullets == 0)
+            return true;
+        return false;
+    }
 }
