@@ -18,6 +18,8 @@ public class rifle_animation_controller : MonoBehaviour {
 		if (Input.GetKey (KeyCode.R) && gun.canReload()) {
 			anim.SetBool (reloadHash, true);
 		}
+		if(!gun.canReload())
+			anim.SetBool (reloadHash, false);
 
 	}
 }
