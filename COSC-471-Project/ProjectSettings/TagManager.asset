@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Gun Camera
   - Gun
+  - Fire
+  - Bullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

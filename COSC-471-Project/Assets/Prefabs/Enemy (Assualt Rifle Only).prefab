@@ -143,6 +143,7 @@ GameObject:
   - 23: {fileID: 2397648}
   - 143: {fileID: 14367536}
   - 114: {fileID: 11486284}
+  - 114: {fileID: 11455914}
   m_Layer: 0
   m_Name: Enemy (Assualt Rifle Only)
   m_TagString: Untagged
@@ -482,11 +483,24 @@ MonoBehaviour:
   ammo: 60
   maxBullets: 30
   bulletSpawn: {fileID: 407996}
-  projectile: {fileID: 484456, guid: 7f43e9145b6ca6a45954077a9f408a46, type: 2}
+  projectile: {fileID: 484456, guid: f0c8e6dc065deb54381e2d41b37501fb, type: 2}
   bulletHole: {fileID: 487438, guid: 7eb5922fb75f2ca45abf1270d84c90a1, type: 2}
   bulletSpeed: 2000
   nextShotTime: 0.15
   reloadTime: 2
+--- !u!114 &11455914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91aab725ba29fd5439cff8bdf87c63f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 45
+  takeDamage: 15
 --- !u!114 &11486284
 MonoBehaviour:
   m_ObjectHideFlags: 1
