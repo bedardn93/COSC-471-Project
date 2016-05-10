@@ -14,6 +14,8 @@ public class mouse_controller : MonoBehaviour {
 	private float rotY = 0.0f;
 	// Use this for initialization
 	void Start () {
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -36,5 +38,10 @@ public class mouse_controller : MonoBehaviour {
             rotY = Mathf.Clamp(rotY, minY, maxY);
             transform.localEulerAngles = new Vector3(-rotY, transform.localEulerAngles.y, 0);
         }
+	}
+
+	void OnMouseDown(){
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 }
