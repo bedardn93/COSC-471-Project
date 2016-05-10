@@ -16,7 +16,7 @@ GameObject:
   - 108: {fileID: 10869574}
   m_Layer: 0
   m_Name: bullet
-  m_TagString: Bullet
+  m_TagString: RifleBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

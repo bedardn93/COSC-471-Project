@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class gun_controller : MonoBehaviour {	
+	rifle_animation_controller anim;
 	AudioSource audio;
 	public int ammo = 60;
 	public int maxBullets = 30;
@@ -14,16 +16,19 @@ public class gun_controller : MonoBehaviour {
 	public float nextShotTime = 0.15f;
 	float nextReload;
 	public float reloadTime = 2.0f;
+	public Text ammoText;
 	public gun_controller(){
 		
 	}
 	// Use this for initialization
 	void Start () {		
+		anim = GetComponent<rifle_animation_controller> ();
 		audio = GetComponent<AudioSource> ();
 		//Set nextshot and nextreload timers
 		nextShot = Time.fixedTime + nextShotTime;
 		nextReload = Time.fixedTime;
 		bullets = maxBullets;
+		ammoText.text = bullets.ToString() + "/" + ammo.ToString();
 	}
 
 	// Update is called once per frame
@@ -39,11 +44,14 @@ public class gun_controller : MonoBehaviour {
 		if (Input.GetKey (KeyCode.R) && canReload()) {
 			reload ();
 		}
+		ammoText.text = bullets.ToString() + "/" + ammo.ToString();
 	}
 
 	public void reload(){
 		//Delay nextReload so player can't continue firing or initiate another reload
 		nextReload = Time.fixedTime + reloadTime;
+		if(anim != null)
+			anim.playAnimation ();
 		//If statement for handling ammo (pooled bullets) 
 		//and bullet (loaded bullets) management
 		if (ammo + bullets < maxBullets) {
@@ -65,9 +73,10 @@ public class gun_controller : MonoBehaviour {
 		Ray ray = new Ray(transform.position, transform.forward);
 		RaycastHit hit;		 
 		if (Physics.Raycast (ray, out hit, 1000.0f)) {
-			Debug.DrawLine (ray.origin, hit.point);
-			Quaternion bulletHoleRotation = Quaternion.FromToRotation (Vector3.up, hit.normal);
-			Instantiate (bulletHole, hit.point, bulletHoleRotation);
+			if (hit.collider.gameObject.tag.Equals ("Geometry")) {
+				Quaternion bulletHoleRotation = Quaternion.FromToRotation (Vector3.up, hit.normal);
+				Instantiate (bulletHole, hit.point, bulletHoleRotation);
+			}
 		}
 		//Apply force up y-axis (green axis)
 		clone.AddForce (clone.transform.up * bulletSpeed);

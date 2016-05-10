@@ -9,6 +9,11 @@ TagManager:
   - Fire
   - Bullet
   - EnemyBullet
+  - Geometry
+  - Enemy
+  - PistolBullet
+  - RifleBullet
+  - RPGBullet
   layers:
   - Default
   - TransparentFX
