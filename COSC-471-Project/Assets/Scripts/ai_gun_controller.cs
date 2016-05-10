@@ -50,9 +50,10 @@ public class ai_gun_controller : MonoBehaviour {
 		Ray ray = new Ray(transform.position, transform.forward);
 		RaycastHit hit;		 
 		if (Physics.Raycast (ray, out hit, 1000.0f)) {
-			Debug.DrawLine (ray.origin, hit.point);
-			Quaternion bulletHoleRotation = Quaternion.FromToRotation (Vector3.up, hit.normal);
-			Instantiate (bulletHole, hit.point, bulletHoleRotation);
+			if (hit.collider.gameObject.tag.Equals ("Geometry")) {
+				Quaternion bulletHoleRotation = Quaternion.FromToRotation (Vector3.up, hit.normal);
+				Instantiate (bulletHole, hit.point, bulletHoleRotation);
+			}
 		}
 		//Apply force up y-axis (green axis)
 		clone.AddForce (clone.transform.up * bulletSpeed);

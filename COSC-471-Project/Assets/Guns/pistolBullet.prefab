@@ -16,7 +16,7 @@ GameObject:
   - 108: {fileID: 10894652}
   m_Layer: 0
   m_Name: pistolBullet
-  m_TagString: Bullet
+  m_TagString: PistolBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d7efd9981e6ea4c95d8f13c75a6d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPrefab: {fileID: 453882, guid: 0f4aebefcbb428b4d982161d58e07385, type: 2}
+  hitPrefab: {fileID: 453882, guid: f2a88f61f88e09247b9c47910b7d65c5, type: 2}
 --- !u!136 &13631678
 CapsuleCollider:
   m_ObjectHideFlags: 1
