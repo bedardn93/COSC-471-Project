@@ -338,15 +338,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ee7889b6d5a634696b808ae7287fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 25
   ammo: 120
   maxBullets: 30
   bullets: 30
   bulletSpawn: {fileID: 433152}
   projectile: {fileID: 484456, guid: 7f43e9145b6ca6a45954077a9f408a46, type: 2}
   bulletHole: {fileID: 487438, guid: 7eb5922fb75f2ca45abf1270d84c90a1, type: 2}
-  bulletSpeed: 5000
+  bulletSpeed: 10000
   nextShotTime: 0.15
   reloadTime: 2
+  ammoText: {fileID: 0}
 --- !u!114 &11499974
 MonoBehaviour:
   m_ObjectHideFlags: 1

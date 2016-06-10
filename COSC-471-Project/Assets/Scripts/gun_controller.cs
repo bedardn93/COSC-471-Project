@@ -5,6 +5,7 @@ using System.Collections;
 public class gun_controller : MonoBehaviour {	
 	rifle_animation_controller anim;
 	AudioSource audio;
+	public int damage = 10;
 	public int ammo = 60;
 	public int maxBullets = 30;
 	public int bullets;
@@ -34,8 +35,7 @@ public class gun_controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Draw ray for debugging purpose (scene only)
-		Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-		Debug.DrawRay (bulletSpawn.position, forward, Color.green);
+
 		//Shooting
 		if (Input.GetKey (KeyCode.Mouse0) && canShoot()) {
 			shoot ();
@@ -72,10 +72,17 @@ public class gun_controller : MonoBehaviour {
 		audio.Play ();
 		Ray ray = new Ray(transform.position, transform.forward);
 		RaycastHit hit;		 
+		Vector3 forward = transform.TransformDirection(Vector3.forward) * 1000;
+
 		if (Physics.Raycast (ray, out hit, 1000.0f)) {
+			Debug.DrawLine (ray.origin, hit.point, Color.red, 15.0f);
 			if (hit.collider.gameObject.tag.Equals ("Geometry")) {
 				Quaternion bulletHoleRotation = Quaternion.FromToRotation (Vector3.up, hit.normal);
 				Instantiate (bulletHole, hit.point, bulletHoleRotation);
+			}
+			if (hit.collider.gameObject.tag.Equals ("Enemy")) {
+				Debug.Log ("hit enemy");
+				hit.collider.gameObject.GetComponent<enemy_health> ().takeDamage (100);
 			}
 		}
 		//Apply force up y-axis (green axis)

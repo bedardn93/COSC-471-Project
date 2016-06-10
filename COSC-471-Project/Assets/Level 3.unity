@@ -3260,7 +3260,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421910, guid: c08e3ec65b545ed45b7ef967e8bf8b3f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8215208, guid: c08e3ec65b545ed45b7ef967e8bf8b3f, type: 2}
       propertyPath: m_Volume
@@ -3281,6 +3281,10 @@ Prefab:
     - target: {fileID: 9509676, guid: c08e3ec65b545ed45b7ef967e8bf8b3f, type: 2}
       propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400936, guid: c08e3ec65b545ed45b7ef967e8bf8b3f, type: 2}
+      propertyPath: damage
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c08e3ec65b545ed45b7ef967e8bf8b3f, type: 2}
@@ -6946,6 +6950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ee7889b6d5a634696b808ae7287fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 25
   ammo: 120
   maxBullets: 30
   bullets: 30
@@ -9578,6 +9583,10 @@ Prefab:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 654073386}
+    - target: {fileID: 499294, guid: a455c99ccb507e54b91900c9a6eac04b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455c99ccb507e54b91900c9a6eac04b, type: 2}
   m_IsPrefabParent: 0
@@ -11609,7 +11618,7 @@ MonoBehaviour:
   currentWeapon: 2
   weapons:
   - {fileID: 1334245249}
-  - {fileID: 594066497}
+  - {fileID: 0}
   - {fileID: 1869374884}
 --- !u!82 &1865793845
 AudioSource:

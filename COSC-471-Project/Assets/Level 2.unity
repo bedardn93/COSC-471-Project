@@ -931,6 +931,18 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11404034, guid: 6e313a0b9b9785743af5b2d46db42be1, type: 2}
+      propertyPath: damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410294, guid: 6e313a0b9b9785743af5b2d46db42be1, type: 2}
+      propertyPath: damage
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404034, guid: 6e313a0b9b9785743af5b2d46db42be1, type: 2}
+      propertyPath: bulletSpeed
+      value: 10000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e313a0b9b9785743af5b2d46db42be1, type: 2}
   m_IsPrefabParent: 0

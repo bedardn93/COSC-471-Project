@@ -13,7 +13,8 @@ public class enemy_health : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (health <= 0)
+			die ();
 	}
 
 	void OnCollisionEnter(Collision other){
@@ -25,11 +26,13 @@ public class enemy_health : MonoBehaviour {
 		}else if (other.gameObject.tag.Equals("RPGBullet")){
 			health -= rpgDamage;
 		}
-		if (health <= 0)
-			die ();
 	}
 
 	void die(){
 		Destroy (this.gameObject);
+	}
+
+	public void takeDamage(int damage){
+		health -= damage;
 	}
 }
